@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% include 'cdnlines.html'%}
+    <title></title>
+  </head>
+  <style media="screen">
+    input[name]{
+      margin-top:4px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h3 class="text-center">Please Enter Students Data Here</h3>
+      <div class="row">
+        <div class="offset-md-4 col-md-6">
+          <form  method="POST" class="shadow-lg">
+            {% csrf_token %}
+            <input type="text" name="fname" class="form-control" placeholder="First Name">
+            <input type="text" name="lname"  class="form-control" placeholder="Last Name">
+            <input type="text" name="course"class="form-control" placeholder="Course">
+            <input type="number" name="fee" class="form-control"placeholder="Fee">
+            <input type="number" name="a1" class="form-control"placeholder="Assignment-1 Marks">
+            <input type="number" name="a2" class="form-control"placeholder="Assignment-2 Marks">
+            <input type="number" name="a3" class="form-control"placeholder="Assignment-3 Marks">
+            <input type="number" name="a4" class='form-control'placeholder="Assignment-4 Marks">
+            <input type="text" name="institute" class="form-control"placeholder="Institute Name">
+            <input type="text" name="location" class="form-control"placeholder="Location">
+            <center>
+              <input type="Submit"  value="Create" class="btn btn-outline-success">
+              <input type="Reset"  value="Clear" class="btn btn-outline-danger"> <br>
+              <a href="{%url 'homepage' %}" class="btn btn-outline-primary mt-2">Goto Main Page</a>
+              </center>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
